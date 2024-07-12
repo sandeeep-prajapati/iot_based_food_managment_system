@@ -33,7 +33,7 @@
                 <p class="text-danger text-center">Allow us for location to show you current leftover food. You can reload the page in case you missed the pop-up button.</p>
             </div>
             <div class="col-md-6 p-4">
-                <img src="assets/main_images/image4.jpeg" style="width: 80%; height: auto;" alt="">
+                <img src="assets/main_images/image2.jpg" style="width: 100%; top:20px; height: auto;" alt="">
             </div>
         </div>
         <br><br><hr class="border"><br><br>
@@ -41,7 +41,7 @@
         <!-- second row -->
         <div class="row">
             <div class="col-md-6">
-                <img src="assets/main_images/image2.png" style="width: 100%; height: auto;" alt="">
+                <img src="assets/main_images/image3.jpeg" style="width: 100%; height: auto;" alt="">
             </div>
             <div class="col-md-6 pt-4">
                 <h3><b>Key Features:</b></h3>
