@@ -42,7 +42,7 @@ void loop() {
   } else {
     Serial.println("WiFi connection lost");
   }
-  delay(10000);
+  delay(5000);
 
 }
 
