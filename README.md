@@ -1,66 +1,48 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Leftover Food Donation Portal
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+I'm excited to share my latest project: an IoT-based solution to donate leftover food efficiently and effectively. 🍽️💡
 
-## About Laravel
+## How It Works
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+1. **Food Detection**: 
+   - Place leftover food in a designated box equipped with a micro-controller (ESP8266) and an ultrasonic sensor. 
+   - If food is detected, data is sent to the server. 📦🔍📡
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+2. **Notification System**: 
+   - The server informs food box indicators with LED lights. 
+   - If food is available within a 2 km range, the LED turns on; otherwise, it stays off. 💻🔔💡
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+3. **Assistance for Non-Mobile Users**: 
+   - Individuals without mobile or internet access can request help from others to check for nearby food availability within a 2 km range. 🤝📱🌐
 
-## Learning Laravel
+4. **Web Interface**: 
+   - A user-friendly web interface displays images, locations, landmarks, contact details, addresses, and descriptions of available food. 🖥️🌍📸
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+5. **Food Collection**: 
+   - Once food is taken from a box, the LED light turns off, and the data is automatically removed from the website. 🍽️💡🗑️
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## The Story Behind This Project
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+My family and I were deeply moved by a documentary on the global food crisis, highlighting that approximately 800 million people lack adequate food. Inspired to make a difference, I developed this technology for better food management and distribution. 🎥🍲📉
 
-## Laravel Sponsors
+## Technology Used
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+- **Frontend**: HTML, CSS, Bootstrap, JavaScript
+- **Backend**: MySQL, Laravel
+- **IoT Devices**: ESP8266, Ultrasonic Sensor, LED Light, Jumper Wires, Breadboard, Batteries
 
-### Premium Partners
+## Website Features
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+- Generate a code for your food donation box.
+- Search for available food within a 2 km range.
+- Easy and intuitive user design.
+- Automated records maintained by IoT devices.
+- Integrated system design utilizing IoT and web technology.
 
-## Contributing
+## Future Aspirations
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+I am continuously enhancing features like using loudspeakers instead of LED lights and integrating AI models to predict the correct amount of food to cook for events. 📢🧠🌟
 
-## Code of Conduct
+---
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Feel free to contribute, suggest improvements, or report issues. Let's work together to reduce food waste and feed the hungry! 🌍💚
