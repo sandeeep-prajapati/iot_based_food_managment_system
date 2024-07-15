@@ -11,6 +11,23 @@ class UserController extends Controller
     public function food_search(Request $req)
     {
         // Implement search functionality here if needed
+        $latitude = floatval($req->input('latitude'));
+        $longitude = floatval($req->input('longitude'));
+
+
+        $lower_latitude =  round($latitude, 4) - 0.0001;
+        $lower_longitude = round($longitude, 4) - 0.0001;
+
+        $upper_latitude =  round($latitude, 4) + 0.0001;
+        $upper_longitude = round($longitude, 4) + 0.0001;
+
+        $results = DB::select('SELECT * FROM myusers WHERE latitude > ? AND latitude < ? AND longitude > ? AND longitude < ? AND status =?', [$lower_latitude, $upper_latitude, $lower_longitude, $upper_longitude,1]);
+
+        if ($results) {
+            return view('leftOverFood',['data'=>$results]);
+        } else {
+            return ['lower_latitude'=>$lower_latitude, 'upper_latitude'=>$upper_latitude, 'lower_longitude'=>$lower_longitude, 'upper_longitude'=>$upper_longitude, 'latitude'=>$latitude, 'longitude'=>$longitude];
+        }
     }
 
     public function setup(Request $req)
@@ -29,8 +46,13 @@ class UserController extends Controller
         ]);
 
         // Store the images
-        $image1Path = $req->file('image1')->store('public/images');
-        $image2Path = $req->file('image2')->store('public/images');
+        $imageNameImage1 = time().'.'.$req->image1->extension();
+        $req->image1->move(public_path('images'), $imageNameImage1);
+
+        $imageNameImage2 = time().'.'.$req->image2->extension();
+        $req->image2->move(public_path('images'), $imageNameImage2);
+            
+
 
         // Create a new Myuser instance and set its properties
         $user = new Myuser();
@@ -41,8 +63,8 @@ class UserController extends Controller
         $user->ssid = $validatedData['ssid'];
         $user->wifiPassword = $validatedData['wifiPassword'];
         $user->contactNo = $validatedData['contactNo'];
-        $user->image1 = $image1Path;
-        $user->image2 = $image2Path;
+        $user->image1 = 'images/'.$imageNameImage1;
+        $user->image2 = 'images/'.$imageNameImage2;
         $user->status = 0;
 
         // Save the record
